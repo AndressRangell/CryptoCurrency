@@ -1,4 +1,18 @@
 package andres.rangel.cryptocurrency.data.remote
 
-class CoinPaprikaApi {
+import andres.rangel.cryptocurrency.data.remote.dto.CoinDetailDto
+import andres.rangel.cryptocurrency.data.remote.dto.CoinDto
+import retrofit2.http.GET
+import retrofit2.http.Path
+
+interface CoinPaprikaApi {
+
+    @GET("/v1/coins")
+    suspend fun getCoins(): List<CoinDto>
+
+    @GET("/v1/coins/{coinId}")
+    suspend fun getCoinById(
+        @Path("coinId") coinId: String
+    ): CoinDetailDto
+
 }
