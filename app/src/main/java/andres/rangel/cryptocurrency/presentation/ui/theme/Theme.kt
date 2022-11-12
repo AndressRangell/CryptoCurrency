@@ -1,4 +1,4 @@
-package andres.rangel.cryptocurrency.presentation.theme
+package andres.rangel.cryptocurrency.presentation.ui.theme
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
